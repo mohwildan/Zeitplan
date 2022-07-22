@@ -9,12 +9,8 @@ const SwiperSlider = () => {
   return (
     <Swiper
       spaceBetween={50}
-      pagination={{
-        type: "progressbar",
-      }}
-      navigation={true}
       modules={[Autoplay]}
-      autoplay={{ delay: 3000 }}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
       grabCursor={true}
       slidesPerView={1}
       style={{ marginTop: "3.5rem", paddingLeft: "0.5rem" }}
