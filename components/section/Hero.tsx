@@ -43,7 +43,7 @@ const Hero = () => {
             <SwiperSlider />
           </Box>
           <Box display={{ base: "none", md: "block" }}>
-            <Image src={HeroImageMain} alt="Hero Image" />
+            <Image src={HeroImageMain} alt="Hero Image" placeholder="blur" />
           </Box>
         </SimpleGrid>
       </Container>

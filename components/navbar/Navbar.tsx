@@ -10,6 +10,7 @@ import {
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import { FiArrowRight } from "react-icons/fi";
+import { FaBars } from "react-icons/fa";
 
 const List = [
   {
@@ -84,6 +85,13 @@ const Navbar = () => {
             <Icon as={FiArrowRight} ml={1} fontSize="1.2rem" marginLeft={4} />
           </Button>
         </UnorderedList>
+        <Icon
+          as={FaBars}
+          display={{ base: "block", md: "none" }}
+          fontSize="1.5rem"
+          color="dark"
+          onClick={() => alert("fitur belum tersidia")}
+        />
       </Container>
     </Box>
   );

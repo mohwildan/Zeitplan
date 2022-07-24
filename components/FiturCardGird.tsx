@@ -9,7 +9,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 const FiturCardGird: FC = () => {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} gap={6} mt={8}>
-      <Card icon={FiCloudOff} title="Si Rizal Gak Pernah Ngonten">
+      <Card icon={FiCloudOff} title="Tersimpan otomatis">
         Kalo lo pelupa ya udah dah, jadwal lo bakal gak kesimpen tuh.
       </Card>
       <Card icon={AiOutlineVideoCamera} title="Si Rizal Gak Pernah Ngonten">
