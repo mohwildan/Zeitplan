@@ -3,7 +3,6 @@ import {
   Button,
   Container,
   Icon,
-  Link,
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react";
@@ -11,23 +10,21 @@ import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import { FiArrowRight } from "react-icons/fi";
 import { FaBars } from "react-icons/fa";
+import { Link } from "react-scroll";
+import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 
 const List = [
   {
     title: "Home",
-    href: "/",
+    href: "home",
   },
   {
     title: "Fitur-Fitur",
-    href: "/fitur",
+    href: "fitur",
   },
   {
     title: "Harga",
-    href: "/harga",
-  },
-  {
-    title: "Testimoni",
-    href: "/testimoni",
+    href: "harga",
   },
 ];
 
@@ -73,8 +70,10 @@ const Navbar = () => {
                 key={item.title}
                 listStyleType="none"
                 marginEnd="1.5rem"
+                color="rgba(0,0,0,0.5)"
+                cursor="pointer"
               >
-                <Link color="rgba(0,0,0,0.5)" href={item.href}>
+                <Link to={item.href} smooth={true} duration={1000}>
                   {item.title}
                 </Link>
               </ListItem>
@@ -85,13 +84,24 @@ const Navbar = () => {
             <Icon as={FiArrowRight} ml={1} fontSize="1.2rem" marginLeft={4} />
           </Button>
         </UnorderedList>
-        <Icon
-          as={FaBars}
-          display={{ base: "block", md: "none" }}
-          fontSize="1.5rem"
-          color="dark"
-          onClick={() => alert("fitur belum tersidia")}
-        />
+        <Menu>
+          <MenuButton as="div">
+            <Icon
+              as={FaBars}
+              display={{ base: "block", md: "none" }}
+              fontSize="1.5rem"
+              color="dark"
+              onClick={() => alert("fitur belum tersidia")}
+            />
+          </MenuButton>
+          <MenuList>
+            {List.map((item, i) => (
+              <Link to={item.href} key={i} smooth={true} duration={1000}>
+                <MenuItem>{item.title}</MenuItem>
+              </Link>
+            ))}
+          </MenuList>
+        </Menu>
       </Container>
     </Box>
   );

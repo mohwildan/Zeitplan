@@ -6,7 +6,7 @@ import FiturCardGird from "../FiturCardGird";
 
 const Fitur: FC = () => {
   return (
-    <Container maxW="80rem" mt="7rem">
+    <Container maxW="80rem" id="fitur" mt="7rem">
       <Flex flexDir={{ base: "column", md: "row" }} gap="2rem">
         <Box flex={1} display={{ base: "none", md: "flex" }}>
           <Image src={ImageFitur} placeholder="blur" />

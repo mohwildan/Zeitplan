@@ -13,7 +13,7 @@ import SwiperSlider from "../SwiperSlider";
 
 const Hero = () => {
   return (
-    <Box background="hero-gradient" pt="13rem" w="full">
+    <Box background="hero-gradient" id="home" pt="13rem" w="full">
       <Container maxW="80rem">
         <SimpleGrid columns={{ base: 1, md: 2 }}>
           <Box marginTop="4rem">
